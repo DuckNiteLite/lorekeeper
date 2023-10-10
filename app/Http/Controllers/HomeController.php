@@ -7,11 +7,15 @@ use App\Services\LinkService;
 use App\Services\UserService;
 use Auth;
 use Carbon\Carbon;
-use Config;
-use DB;
+
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
+use App\Models\SitePage;
+
+use App\Services\LinkService;
+use App\Services\DeviantArtService;
+use App\Services\UserService;
 class HomeController extends Controller
 {
     /*
@@ -30,8 +34,12 @@ class HomeController extends Controller
      */
     public function getIndex()
     {
+        if(Settings::get('featured_character')) {
+            $character = Character::find(Settings::get('featured_character'));
+        }
+        else $character = null;
         return view('welcome', [
-            'about' => SitePage::where('key', 'about')->first(),
+            'about' => SitePage::where('key', 'about')->first()
         ]);
     }
 
