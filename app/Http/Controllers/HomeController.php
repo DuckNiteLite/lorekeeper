@@ -11,7 +11,6 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Laravel\Socialite\Facades\Socialite;
 
-use App\Services\LinkService;
 use App\Services\DeviantArtService;
 use App\Services\UserService;
 class HomeController extends Controller
