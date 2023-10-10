@@ -1,12 +1,12 @@
 @extends('home.layout')
 
-@section('home-title') My MYO Slots @endsection
+@section('home-title') My MYOs @endsection
 
 @section('home-content')
-{!! breadcrumbs(['Characters' => 'characters', 'My MYO Slots' => 'myos']) !!}
+{!! breadcrumbs(['Characters' => 'characters', 'My MYOs' => 'myos']) !!}
 
 <h1>
-    My MYO Slots
+My MYOs
 </h1>
 
 <p>This is a list of MYO slots you own - click on a slot to view details about it. MYO slots can be submitted for design approval from their respective pages.</p>

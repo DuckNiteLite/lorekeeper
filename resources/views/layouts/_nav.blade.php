@@ -35,7 +35,7 @@
                                 My Characters
                             </a>
                             <a class="dropdown-item" href="{{ url('characters/myos') }}">
-                                My MYO Slots
+                                My Slots
                             </a>
                             <a class="dropdown-item" href="{{ url('inventory') }}">
                                 Inventory
@@ -82,10 +82,10 @@
                             Users
                         </a>
                         <a class="dropdown-item" href="{{ url('masterlist') }}">
-                            Character Masterlist
+                            Characters Masterlist
                         </a>
                         <a class="dropdown-item" href="{{ url('myos') }}">
-                            MYO Slot Masterlist
+                            MYOs Masterlist
                         </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="{{ url('raffles') }}">
