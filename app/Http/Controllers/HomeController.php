@@ -15,9 +15,7 @@ use Laravel\Socialite\Facades\Socialite;
 use App\Models\SitePage;
 use App\Models\Character\Character;
 
-use App\Services\LinkService;
-use App\Services\DeviantArtService;
-use App\Services\UserService;
+
 class HomeController extends Controller
 {
     /*
@@ -35,7 +33,11 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function getIndex()
-    {
+    { 
+        return view('welcome', [
+            'about' => SitePage::where('key', 'about')->first(),
+        ]);
+        
         if(Settings::get('featured_character')) {
             $character = Character::find(Settings::get('featured_character'));
         }
